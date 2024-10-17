@@ -5,89 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/base.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <nav>
-        <div class="nav-float nav-left-title">
-            <p>통합 모니터링 시스템</p>
+        <div class="nav-title">
+            <p>간호보조 로봇 통합 모니터링 시스템</p>
         </div>
-        <div class="nav-float nav-data-button">
-            <button>데이터 통계</button>
-        </div>
-        <div class="nav-float nav-center-title">
-            <p>실시간 상황</p>
-        </div>
-        <div class="nav-float nav-admin-button">
-            <button>관리자 모드</button>
-        </div>
-        <div class="nav-float nav-admin-name">
-            <p>관리자 이름</p>
-        </div>
-        <div class="nav-float nav-logout-button">
+        <div class="nav-right">
+            <button>관리자</button>
             <button>로그아웃</button>
+            <span>현재시간</span>
+            <span class="nav-time"></span>
         </div>
     </nav>
-    <div class="main-top-button">
-        <button>전체</button>
-        <button>병원</button>
-        <button>병실</button>
+    
+    <div class="main-tap-area">
+        <ul class="list">
+            <li class="tab-button tab-show">상황판</li>
+            <li class="tab-button">실시간 상황</li>
+            <li class="tab-button">데이터 통계</li>
+            <li class="tab-button">사용자 관리</li>
+            <li class="tab-button">관리자 모드</li>
+        </ul>
     </div>
-
-    <div class="main-middle-area">
-        <div class="main-middle-map">
-            <div class="main-middle-map-button">
-                <button>Map</button>
-                <button>병원 리스트</button>
-                <button>로봇 현황</button>
-            </div>
-            <div class="main-middle-map-area">
-                <!-- 지도사진, 병원리스트, 로봇현황 -->
-            </div>
-        </div>
-        <div class="main-hospital-map">
-            <div class="main-hospital-map-title">
-                <p>울산연세요양병원</p>
-            </div>
-            <div class="main-hospital-map-area">
-                <!-- 병원지도 -->
-            </div>
-        </div>
-        <div class="main-hospital-video">
-            <div style="width: 100%; height: 27px;"></div>
-            <div class="main-hospital-video-area"></div>
-        </div>
-        <div class="main-hospital-alert">
-            <div style="width: 100%; height: 27px;"></div>
-            <div class="main-hospital-alert-area"></div>
+    <div class="tab-page show">
+        <div class="world-map-area">
+            <canvas class="word-map-canvas"></canvas>
         </div>
     </div>
-
-
-    <div class="main-bottom-area">
-        <div class="main-bottom-alert">
-            <div class="main-bottom-alert-title">
-                <p>종합 알림 현황</p>
-            </div>
-            <div class="main-middle-map-area">
-                <!-- 지도사진, 병원리스트, 로봇현황 -->
-            </div>
-        </div>
-        <div class="main-hospital-map">
-            <div class="main-hospital-map-title">
-                <p>울산연세요양병원</p>
-            </div>
-            <div class="main-hospital-map-area">
-                <!-- 병원지도 -->
-            </div>
-        </div>
-        <div class="main-hospital-video">
-            <div style="width: 100%; height: 27px;"></div>
-            <div class="main-hospital-video-area"></div>
-        </div>
-        <div class="main-hospital-alert">
-            <div style="width: 100%; height: 27px;"></div>
-            <div class="main-hospital-alert-area"></div>
-        </div>
+    <div class="tab-page">
+        실시간 상황
     </div>
+    <div class="tab-page">
+        데이터 통계
+    </div>
+    <div class="tab-page">
+        사용자 관리
+    </div>
+    <div class="tab-page">
+        관리자 모드
+    </div>
+    
+    <script src="../js/main.js"></script>
 </body>
 </html>

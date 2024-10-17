@@ -7,7 +7,8 @@ div, input, textarea {
 body {
     padding-top: 0.1px;
     margin: 0;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(13, 22, 39);
+    height: 100%;
 }
 
 button:hover{
@@ -16,181 +17,116 @@ button:hover{
 
 html {
     line-height : 1.15; /*기본 행간 높이*/
+    height: 100%;
 }
 
 nav {
     width: 100%;
-    height: 100px;
+    height: 40px;
     background-color: black;
 }
 
-nav p, nav button{
-    color: aliceblue;
-}
-
-nav button {
-    background-color: grey;
-}
-
-.nav-left-title {
-    width: 20%;
+.nav-title {
+    width: 57%;
     height: 100%;
-    background-color: rgba(240, 248, 255, 0.342);
+    float: left;
     color: aliceblue;
     font-weight: bold;
-    padding: 1px;
 }
 
-.nav-left-title p,
-.nav-center-title p,
-.nav-admin-name p {
-    margin-top: 35px;
+.nav-title p {
+    text-align: right;
+    margin: 5px 5px 5px 5px;
+    padding: 6px;
 }
 
-.nav-center-title p {
-    font-size: 40px;
-    margin: 25px 5px;
-}
-
-.nav-float {
+.nav-right {
+    width: 43%;
+    height: 100%;
     float: left;
-    text-align: center;
+    text-align: right;
+    padding: 6px;
+}
+
+.nav-right button {
     height: 100%;
+    width: 100px;
+    margin-right: 10px;
+    background-color: rgb(145, 145, 145);
 }
 
-.nav-data-button,
-.nav-admin-button,
-.nav-logout-button {
-    width: 15%;
-}
-
-.nav-center-title {
-    width: 30%;
-}
-
-.nav-data-button button,
-.nav-admin-button button,
-.nav-logout-button button{
-    width: 150px;
-    height: 50px;
-    margin-top: 25px;
-    font-size: 17px;
-}
-
-.main-top-button {
-    width: 100%;
-    height: 65px;
-    background-color: rgba(212, 212, 212, 0.562);
-}
-
-.main-middle {
-    width: 100%;
+.nav-time,
+.nav-right span {
+    color: white;
     height: 100%;
+    font-weight: bold;
 }
 
-.main-top-button button {
-    width: 80px;
+.nav-time {
+    margin-right: 10px;
+}
+
+/*** 탭부분 ***/
+
+.main-tap-area {
+    margin-top: 5px;
     height: 40px;
-    margin-top: 15px;
+    width: 100%;
+}
+
+ul.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid rgb(22, 39, 70);
+}
+
+ul.list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+  .tab-button {
+    display: block;
+    padding: 10px 20px 10px 20px;
+    float: left;
     margin-left: 10px;
-}
+    margin-bottom: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(13, 22, 39);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-.main-middle-area,
-.main-bottom-area {
+  .tab-show {
+    background-color: rgb(22, 39, 70);
+  }
+
+  .tab-page {
     width: 100%;
-    height: 390px;
-    /* border: 1px solid black; */
-    background-color: rgba(212, 212, 212, 0.562);
-    padding: 5px 10px;
-}
+    display: none;
+    padding: 10px;
+    height: calc(100% - 85px);
+    background-color: rgb(22, 39, 70);
+  }
+  .show {
+    display: block;
+  }
 
-.main-middle-map,
-.main-bottom-alert {
-    width: 350px;
+  .world-map-area {
+    width: 500px;
     height: 100%;
-    /* border: 1px solid rebeccapurple; */
-    margin-right: 17px;
-    float: left;
-}
-.main-middle-map-button {
-    /* border: 1px solid rgb(133, 57, 209); */
-    height: 27px;
+    border: 2px solid rgb(32, 61, 114);
+    border-radius: 5px;
+    background-image : url(../img/pngegg.png);
+    background-color: rgb(36, 69, 129);
+    background-size : cover;
+    background-position : center;
+  }
+
+  .word-map-canvas {
     width: 100%;
-}
-
-.main-bottom-alert-title {
-    height: 27px;
-    width: 40%;
-    background-color: rgb(231, 231, 231);
-    border: 1px solid gray;
-    text-align: center;
-}
-
-.main-bottom-alert-title p{
-    margin: 0;
-    padding: 4px;
-}
-
-
-.main-middle-map-button button {
-    float: left;
-    vertical-align: bottom;
-    width: 33.333333%;
     height: 100%;
-}
-
-.main-middle-map-area {
-    background-color: aliceblue;
-    border: 2px solid gray;
-    width: 100%;
-    height: calc(100% - 27px);
-}
-
-.main-hospital-map {
-    width: 750px;
-    height: 100%;
-    /* border: 1px solid blue; */
-    float: left;
-    margin-right: 10px;
-}
-
-.main-hospital-map-title {
-    width: 50%;
-    height: 27px;
-    text-align: center;
-    background-color: rgb(81, 90, 209);
-    color: aliceblue;
-    border-radius: 4px 4px 0px 0px;
-}
-
-.main-middle-map-button p,
-.main-hospital-map-title p {
-    margin: 0;
-    padding: 4px
-    
-}
-
-.main-hospital-video {
-    width: 380px;
-    height: 100%;
-    /* border: 1px solid red; */
-    float: left;
-    margin-right: 10px;
-}
-
-.main-hospital-map-area,
-.main-hospital-video-area,
-.main-hospital-alert-area {
-    width: 100%;
-    height: calc(100% - 27px);
-    background-color: rgb(207, 238, 228);
-    border: 2px solid gray;
-}
-
-.main-hospital-alert {
-    width: 380px;
-    height: 100%;
-    /* border: 1px solid rgb(255, 153, 0); */
-    float: left;
-}
-
+  }
